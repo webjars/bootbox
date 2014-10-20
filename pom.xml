@@ -53,7 +53,7 @@
 				"bootbox" : {
 					"deps" : ["bootstrap", "jquery"],
 					"exports" : "bootbox"
-				},
+				}
 			}
 		}
 	  </requirejs>
