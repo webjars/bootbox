@@ -11,7 +11,7 @@
    <groupId>org.webjars</groupId>
    <artifactId>bootbox</artifactId>
    <name>Bootbox</name>
-   <version>4.3.1-SNAPSHOT</version>
+   <version>4.3.0-1-SNAPSHOT</version>
    <packaging>jar</packaging>
    <description>WebJar for Bootbox</description>
    <url>http://webjars.org</url>
@@ -44,6 +44,16 @@
       <upstreamVersion>4.3.0</upstreamVersion>
       <sourceUrl>http://github.com/makeusabrew/bootbox/archive</sourceUrl>
       <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
+      <requirejs>
+        {
+          "paths": {
+            "bootbox": "bootbox"
+          },
+          "shim": {
+            "bootbox": ["bootstrap"]
+          }
+        }
+      </requirejs>
    </properties>
 
    <build>
