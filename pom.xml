@@ -11,7 +11,7 @@
    <groupId>org.webjars</groupId>
    <artifactId>bootbox</artifactId>
    <name>Bootbox</name>
-   <version>4.4.0-SNAPSHOT</version>
+   <version>4.4.0</version>
    <packaging>jar</packaging>
    <description>WebJar for Bootbox</description>
    <url>http://webjars.org</url>
@@ -28,7 +28,7 @@
       <url>http://github.com/webjars/bootbox</url>
       <connection>scm:git:https://github.com/webjars/bootbox.git</connection>
       <developerConnection>scm:git:https://github.com/webjars/bootbox.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>bootbox-4.4.0</tag>
    </scm>
 
    <developers>
@@ -89,12 +89,12 @@
                   </goals>
                   <configuration>
                      <target>
-                        <echo message="unzip archive"/>
-                        <unzip src="${project.build.directory}/v${upstreamVersion}.zip" dest="${project.build.directory}"/>
-                        <echo message="moving resources"/>
+                        <echo message="unzip archive" />
+                        <unzip src="${project.build.directory}/v${upstreamVersion}.zip" dest="${project.build.directory}" />
+                        <echo message="moving resources" />
                         <move todir="${destDir}">
                            <fileset dir="${project.build.directory}/${artifactId}-${upstreamVersion}">
-                              <include name="*.js"/>
+                              <include name="*.js" />
                            </fileset>
                         </move>
                      </target>
