@@ -89,12 +89,12 @@
                   </goals>
                   <configuration>
                      <target>
-                        <echo message="unzip archive" />
-                        <unzip src="${project.build.directory}/v${upstreamVersion}.zip" dest="${project.build.directory}" />
-                        <echo message="moving resources" />
+                        <echo message="unzip archive"/>
+                        <unzip src="${project.build.directory}/v${upstreamVersion}.zip" dest="${project.build.directory}"/>
+                        <echo message="moving resources"/>
                         <move todir="${destDir}">
                            <fileset dir="${project.build.directory}/${artifactId}-${upstreamVersion}">
-                              <include name="*.js" />
+                              <include name="*.js"/>
                            </fileset>
                         </move>
                      </target>
